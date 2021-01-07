@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://reading.iclass.hk/login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>初中歷史科電子閱讀平台（試用版）</title>
+<link rel="apple-touch-icon-precomposed" href="https://reading.iclass.hk/assets/img/iclass_logo_square_200928.png">
+<link rel="icon" href="https://reading.iclass.hk/assets/img/iclass_logo_square_200928.png" type="image/png" sizes="318x318">
+	<link type="text/css" rel="stylesheet" href="./index_files/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="./index_files/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="./index_files/login.css">
+	<script type="text/javascript" src="./index_files/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./index_files/modal.js"></script>
+	<script type="text/javascript" src="./index_files/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="login_header">
+<img id="login_header_logo" src="./index_files/module_icon.png" alt="">
+  <!-- title -->
+  <span id="login_header_title">初中歷史科電子閱讀平台（試用版）</span>
+  <!-- organizer -->
+  <div class="row" id="organizer_wrapper">
+    <!-- content-left -->
+    <div class="col-xs-12 content_left text-left">
+      <div class="row_head">主辦機構</div>
+      <div class="row_one">
+        <span class="col-left">教育局</span>
+        <span>香港大學電子學習發展實驗室</span>
+      </div>
+      <div class="row_two">
+        <span class="col-left">Education Bureau</span>
+        <span>The University of Hong Kong</span><br>
+      </div>
+      <div class="row_three">
+        <span class="col-left"></span>
+        <span>e-Learning Development Laboratory</span>
+      </div>
+    </div>
+    <!-- content-right -->
+    <!-- <div class="col-xs-6 content_right text-left">
+      <div class="row_head">協辦機構</div>
+      <div class="row_one">
+        <span>歷史科電子學習學校網絡</span>
+      </div>
+      <div class="row_two">
+        <span>History e-Learning Schools Network</span>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<style>
+#organizer_wrapper{
+  padding: 0 30px 5px 30px;
+  margin: 0;
+  font-size: 85%;
+}
+#organizer_wrapper .row_head{
+  margin-bottom: 5px;
+}
+#organizer_wrapper .row_one{
+  font-size: 150%;
+}
+#organizer_wrapper .row_two,
+#organizer_wrapper .row_three{
+  font-size: 110%;
+}
+#organizer_wrapper .content_left .col-left{
+  display: inline-block;
+  width: 150px;
+}
+
+@media only screen and (max-width: 600px){
+  #login_header{
+    font-size: 80%;
+  }
+  #login_header_logo{
+    width: 30px;
+    height: 30px;
+  }
+  #login_header_title{
+    width: calc(100% - 35px);
+  }
+  #organizer_wrapper{
+    padding: 0 20px 5px 20px;
+  }
+}
+
+</style>
+	<div id="login_container">
+			<script type="text/javascript" src="./index_files/jquery-confirm.js"></script>
+	<link type="text/css" rel="stylesheet" href="./index_files/jquery-confirm.css">
+
+<script type="text/javascript">
+$(function(){
+  if(window.matchMedia("(max-width: 600px)").matches){
+    var headerHeight = $('#login_header').height();
+    var loginBoxHeight = $('#login_box').height();
+    var loginWrapper = $(window).height()-headerHeight-50;
+    if(loginWrapper > loginBoxHeight){
+      var marginTop = (loginWrapper-loginBoxHeight)/2;
+      marginTop = headerHeight+marginTop;
+    }else{
+      var marginTop = headerHeight+10;
+    }
+    $("#login_box").css({
+      'top': 0,
+      'margin-top': marginTop
+    });
+  }
+  $("#reg_button").click(function (){
+    // var deadline = new Date("2020-03-28 00:00");
+    // var now = new Date(Date.now());
+    // if (now > deadline){
+    //   $.confirm({
+    //     title: '',
+    //     // content: '<div style="font-size:20px;">是次獎勵計劃的報名已於2020年3月27日截止。<br><br>如欲報名或查詢其他相關事宜，請電郵至cdopshe51@edb.gov.hk 與教育局課程發展處同工聯絡。謝謝。</div>',
+    //     content: '<div style="font-size:20px;">「初中歷史科電子閱讀平台（試用版）」即將推出。詳情將稍後公布。</div>',
+    //     columnClass: 'medium',
+    //     buttons: {
+    //       OK: function () {}
+    //     }
+    //   });
+    // } else {
+      location.href = "/school";
+    // }
+  });
+})
+</script>
+<div id="leftContainer" class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+  <img id="login_logo_img" src="./index_files/iclass_logo_square_200928.png" alt=""></div>
+<div id="rightContainer" class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+  <div id="login_box">
+    <form id="login_form" action="https://reading.iclass.hk/login/add_session" method="POST">
+      <p>
+              </p>
+      <p><input type="text" name="username" id="login_username" class="login_fields" placeholder="登入名稱"></p>
+      <p><input type="password" name="password" id="login_password" class="login_fields" placeholder="密碼"></p>
+      <p></p><center><a onclick="login_form.submit();" id="login_button">登入</a></center><p></p>
+      <!-- School Registration -->
+      <!-- <div class="text-center"><a href="/school" id="reg_button" class="btn" role="button">學校報名</a></div> -->
+      <div class="text-center"><a id="reg_button" class="btn" role="button">學校報名(教師專用)</a></div>
+    </form>
+  </div>
+</div>
+	</div>
+	<div id="login_footer">
+  <span id="login_footer_content">Powered by iClass LMS. © 2019-20.&nbsp;&nbsp;&nbsp;</span>
+</div>
+	<script>
+$("#login_username").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#login_password").focus();
+    }
+});
+$("#login_password").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#login_button").click();
+    }
+});
+</script>
+
+
+</body></html>
